@@ -1,0 +1,197 @@
+body {
+  padding: 16px;
+background-color: #FFF3EA;
+font-family: Roboto;
+outline-color: #000000;
+}
+
+.logoGrid {
+  max-width:960px;
+  margin:0px 20px;
+  padding:0px;
+  box-sizing:border-box;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+  .logo {
+    width: 50px;
+    height: 50px;
+margin-bottom: 5px;
+float:right;
+margin-right: 5px;
+  }
+
+  .halfbox{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    text-align:justify; /*left, right, center, justify*/
+    grid-column-end: span 2;
+  }
+
+  .productName {
+    color: #DA9F5E;
+    font-size: 20px;
+    font-weight: 400px;
+    margin: auto 5px;
+    text-align: left;
+    padding: 15px 0px;
+    letter-spacing: 2px;
+  }
+  .Subtitle {
+    color: #373737;
+    font-size: 12px;
+    font-weight: 300px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: -2px 20px;
+  }
+  .functionTitles {
+    color: #373737;
+    font-size: 18px;
+    font-weight: 900px;
+    margin-top: 0;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 0px;
+  }
+
+  .SwitchButton {
+    color: #373737;
+    font-size: 18px;
+    font-weight: 900px;
+    margin: 30px 20px 30px 20px;
+    text-align: left;
+    letter-spacing: 1px;
+  }
+  .bodyText {
+    color: #5E5E5E;
+    font-size: 12px;
+    font-weight: 100px;
+    margin: 0px 20px;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+  #runAxs {
+    background-color: #000000; /* Green */
+  border: none;
+  color: #FFF3EA;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  float: right;
+  }
+
+  /* h2 {
+    color: rgb(110, 116, 128);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-top: 0;
+  }
+  .warning {
+    color: #e69808;
+  }
+  .severe {
+    color: #c10f0f;
+  }
+  .vbox {
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar {
+    overflow-x: hidden;
+    background: #f3f3f3;
+    max-width: 330px;
+    min-width: 170px;
+  }
+  .f {
+    margin-bottom: 16px;
+  }
+  button {
+    background-image: linear-gradient(
+      hsl(0, 0%, 93%),
+      hsl(0, 0%, 93%) 38%,
+      hsl(0, 0%, 87%)
+    );
+    border: 1px solid hsla(0, 0%, 0%, 0.25);
+    border-radius: 2px;
+    box-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.08),
+      inset 0 1px 2px hsla(0, 100%, 100%, 0.75);
+    color: hsl(0, 0%, 27%);
+    font-size: 12px;
+    margin: 0 1px 0 0;
+    text-shadow: 0 1px 0 hsl(0, 0%, 94%);
+    min-height: 2em !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-user-select: none;
+    flex: none;
+  } */
+  /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 17px;
+  float: right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #FFFFFF;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #000000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #727070;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
