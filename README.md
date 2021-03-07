@@ -22,3 +22,16 @@ git clone https://github.com/yourusername/Creative-Code-Project.git
 Then you need to head to go [Google chrome extension](chrome://extensions/) and toggle on developer mode.
 You then want to load this entire folder and it'll work!
 If you plan on making any edits make sure to reload it everytime.
+
+
+## Credit
+
+- https://developer.chrome.com/docs/extensions/mv2/getstarted/
+- https://usefulangle.com/post/98/javascript-text-to-speech
+- https://github.com/GoogleChrome/accessibility-developer-tools
+- http://web-accessibility.carnegiemuseums.org/design/color/
+- https://github.com/chromelens/chromelens
+- https://dev.to/asaoluelijah/text-to-speech-in-3-lines-of-javascript-b8h
+- https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
+- https://www.akeaweb.com/learn-about-web-accessibility/resources/accessibility-statistics/
+- https://www.youtube.com/watch?v=hkOTAmmuv_4&list=PLRqwX-V7Uu6bL9VOMT65ahNEri9uqLWfS
