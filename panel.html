@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html style="display: flex">
+<html style="display: flex" lang="en">
 <head>
+  <title>Reveler</title>
   <meta charset="utf8" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="panel.css" rel="stylesheet" type="text/css">
@@ -21,7 +22,7 @@
       Text-to-Speech
       <!-- Rounded switch -->
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="myCheck" label="turn on and off text to speech">
         <span class="slider round"></span>
       </label>
     </div>
@@ -30,14 +31,69 @@
     <div class="intro">
     <p class="bodyText">A tool for accessibilty. Click “run” to test this website.</p>
       <br/>
+      <div id="onlyHomepage">
       <p class="functionTitles">What We Do:</p>
       <p class="bodyText">An extension that runs accessibility tests for websites.</p>
     </div>
-    <button id="clearAxs" style="visibility: hidden">Clear checks</button>
-      <div id="axs-results"></div>
+    <!-- Purposely not deleting the code below -->
+   <button id="clearAxs" style="visibility: hidden">Clear checks</button>
+      <!-- <div id="axs-results" style="display: hidden"></div>  -->
+
+      
 
 
+    <div id="pageAnalysis" style="display:none ;">
+      <p class="functionTitles">Test Result</p>
+      <div class="inARow2">
+      <!-- <img id="grade" src="img/letterC"> -->
+      <p id="grade"></p>
+      <p class="bodyText" id="space">The grade received for this website is based on accessibility check. We check for color contrast, screen reader compatability, text structure, and font type. The higher the grade the less errors it has and the more it is accessible to use.</p>
+    </div>
+      <div class="inARow">
+      <p class="functionTitles" id="pageAnalysis1">Color Contrast</p>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+    </div>
+    <br>  
+      <p class="bodyText" id="categoryInfo1" style="display:none ;">The color contrast fits all the accessibility criteria.</p>
+ 
 
+      <div class="inARow">
+      <p class="functionTitles" id="pageAnalysis2">Large Font</p>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+    </div>
+      <p class="bodyText" id="categoryInfo2" style="display:none ;">The font size is appropriate for this page size.</p>
+      
+
+      <br/>
+      <div class="inARow">
+      <p class="functionTitles" id="pageAnalysis3">Clear Font</p>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+    </div>
+      <p class="bodyText" id="categoryInfo3" style="display:none ;">No cursive fonts have been used on this page.</p>
+      
+      <br/>
+      <div class="inARow">
+      <p class="functionTitles" id="pageAnalysis4">Pictures</p>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/><path d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm4.3 14.3c-.39.39-1.02.39-1.41 0L12 13.41 9.11 16.3c-.39.39-1.02.39-1.41 0-.39-.39-.39-1.02 0-1.41L10.59 12 7.7 9.11c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L12 10.59l2.89-2.89c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L13.41 12l2.89 2.89c.38.38.38 1.02 0 1.41z"/></svg>
+    </div>
+      <p class="bodyText" id="categoryInfo4" style="display:none ;">Some of the picture are missing an alt tag.</p>
+      
+      <br/>
+      <div class="inARow">
+      <p class="functionTitles" id="pageAnalysis5">Text Structure</p>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/><path d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm4.3 14.3c-.39.39-1.02.39-1.41 0L12 13.41 9.11 16.3c-.39.39-1.02.39-1.41 0-.39-.39-.39-1.02 0-1.41L10.59 12 7.7 9.11c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L12 10.59l2.89-2.89c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L13.41 12l2.89 2.89c.38.38.38 1.02 0 1.41z"/></svg>
+    </div>
+      <p class="bodyText" id="categoryInfo5" style="display:none ;">The text structure might be hard for a screen reader.</p>
+      
+
+
+    </div>
+</div>
 
 
     </div>

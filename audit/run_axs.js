@@ -12,6 +12,7 @@ var STYLE = `<style>
     z-index: ${BASE_Z};
   }
   .chrome-lens-warning {
+    visibility: hidden;
     position: absolute;
     box-shadow: 0 0 4px 4px #f7983a;
     border-radius: 2px;
@@ -124,22 +125,22 @@ function tooltipNode(offendingEl) {
 
   const div = document.createElement('div');
   div.className = CHROME_LENS_WARNING_CLASS;
-  div.classList.add('tooltip');
-  div.style.left = left + 'px';
-  div.style.top = top + 'px';
-  div.style.width = width + 'px';
-  div.style.height = height + 'px';
+  // div.classList.add('tooltip');
+  // div.style.left = left + 'px';
+  // div.style.top = top + 'px';
+  // div.style.width = width + 'px';
+  // div.style.height = height + 'px';
   // this id will be useful if we want to reference specific warnings emitted
   div.id = 'chrome-lens-warning-' + WARNING_COUNT;
 
-  div.onmouseover = function() {
-    chrome.runtime.sendMessage({
-      type: 'HIGHLIGHT_REPORT',
-      data: {
-        warningId: div.id
-      }
-    })
-  }
+  // div.onmouseover = function() {
+  //   chrome.runtime.sendMessage({
+  //     type: 'HIGHLIGHT_REPORT',
+  //     data: {
+  //       warningId: div.id
+  //     }
+  //   })
+  // }
   div.onmouseout = function() {
     chrome.runtime.sendMessage({
       type: 'UNHIGHLIGHT_REPORT',
@@ -213,14 +214,16 @@ function run() {
 run();
 
 chrome.runtime.onMessage.addListener(function(message) {
-  switch (message.type) {
-    case 'HIGHLIGHT_WARNING': {
-      const { warningId } = message.data;
+  const { warningId } = message.data;
       const warningTooltip = document.querySelector('#' + warningId + ' .tooltip-text');
-      if (!warningTooltip) { return; }
-      warningTooltip.style.visibility = 'visible';
-      break;
-    }
+  switch (message.type) {
+    // case 'HIGHLIGHT_WARNING': {
+    //   const { warningId } = message.data;
+    //   const warningTooltip = document.querySelector('#' + warningId + ' .tooltip-text');
+    //   if (!warningTooltip) { return; }
+    //   warningTooltip.style.visibility = 'visible';
+    //   break;
+    // }
     case 'UNHIGHLIGHT_WARNING': {
       const { warningId } = message.data;
       const warningTooltip = document.querySelector('#' + warningId + ' .tooltip-text');
@@ -233,4 +236,5 @@ chrome.runtime.onMessage.addListener(function(message) {
         break;
     }
   }
+  warningTooltip.style.visibility = 'hidden';
 })

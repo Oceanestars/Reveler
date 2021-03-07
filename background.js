@@ -45,26 +45,26 @@ const devToolsListener = function(message, sender, sendResponse) {
       }
       break;
     }
-    case messageType.HIGHLIGHT_WARNING: {
-        const { warningId } = message.data;
-        chrome.tabs.sendMessage({
-          type: messageType.HIGHLIGHT_WARNING,
-          data: {
-            warningId: warningId
-          }
-        })
-        break;
-    }
-    case messageType.UNHIGHLIGHT_WARNING: {
-        const { warningId } = message.data;
-        chrome.tabs.sendMessage({
-          type: messageType.UNHIGHLIGHT_WARNING,
-          data: {
-            warningId: warningId
-          }
-        })
-        break;
-    }
+    // case messageType.HIGHLIGHT_WARNING: {
+    //     const { warningId } = message.data;
+    //     chrome.tabs.sendMessage({
+    //       type: messageType.HIGHLIGHT_WARNING,
+    //       data: {
+    //         warningId: warningId
+    //       }
+    //     })
+    //     break;
+    // }
+    // case messageType.UNHIGHLIGHT_WARNING: {
+    //     const { warningId } = message.data;
+    //     chrome.tabs.sendMessage({
+    //       type: messageType.UNHIGHLIGHT_WARNING,
+    //       data: {
+    //         warningId: warningId
+    //       }
+    //     })
+    //     break;
+    // }
     // case messageType.HIGHLIGHT_REPORT: {
     //   const { warningId } = message.data;
     //   if (devtools) {

@@ -1,88 +1,88 @@
 body {
   padding: 16px;
-background-color: #FFF3EA;
-font-family: Roboto;
-outline-color: #000000;
+  background-color: #fff3ea;
+  font-family: Roboto;
+  outline-color: #000000;
 }
 
 .logoGrid {
-  max-width:960px;
-  margin:0px 20px;
-  padding:0px;
-  box-sizing:border-box;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+  max-width: 960px;
+  margin: 0px 20px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
-  .logo {
-    width: 42px;
-    height: 42px;
-/* margin-bottom: px; */
-float:right;
-margin-right: 29px;
-  }
+.logo {
+  width: 42px;
+  height: 42px;
+  /* margin-bottom: px; */
+  float: right;
+  margin-right: 29px;
+}
 
-  .halfbox{
-    margin:0px;
-    padding:0px;
-    box-sizing:border-box;
-    text-align:justify; /*left, right, center, justify*/
-    grid-column-end: span 2;
-  }
+.halfbox {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-align: justify; /*left, right, center, justify*/
+  grid-column-end: span 2;
+}
 
-  .productName {
-    color: #DA9F5E;
-    font-size: 20px;
-    font-weight: 400px;
-    margin: auto -22px;
-    text-align: left;
-    padding: 15px 0px;
-    letter-spacing: 2px;
-  }
-  .Subtitle {
-    color: #373737;
-    font-size: 12px;
-    font-weight: 300px;
-    text-align: center;
-    letter-spacing: 2px;
-    margin: -7px 20px 10px 20px;
-  }
-  .functionTitles {
-    color: #373737;
-    font-size: 18px;
-    font-weight: 900px;
-    text-align: left;
-    letter-spacing: 1px;
-    margin: 0px 20px;
-  }
+.productName {
+  color: #da9f5e;
+  font-size: 20px;
+  font-weight: 400px;
+  margin: auto -22px;
+  text-align: left;
+  padding: 15px 0px;
+  letter-spacing: 2px;
+}
+.Subtitle {
+  color: #373737;
+  font-size: 12px;
+  font-weight: 300px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: -7px 20px 10px 20px;
+}
+.functionTitles {
+  color: #373737;
+  font-size: 18px;
+  font-weight: 900px;
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0px 20px;
+}
 
-  .switchButton {
-    color: #373737;
-    font-size: 18px;
-    font-weight: 900px;
-    margin: 30px 20px 30px 20px;
-    text-align: left;
-    letter-spacing: 1px;
-  }
-  .runButton {
-    color: #373737;
-    font-size: 18px;
-    font-weight: 900px;
-    margin: 30px 20px 0px 20px;
-    text-align: left;
-    letter-spacing: 1px;
-  }
-  .bodyText {
-    color: #5E5E5E;
-    font-size: 12px;
-    font-weight: 100px;
-    margin: 5px 20px 20px 20px;
-    text-align: left;
-    letter-spacing: 0.5px;
-  }
-  #runAxs {
-    background-color: #000000; /* Green */
+.switchButton {
+  color: #373737;
+  font-size: 18px;
+  font-weight: 900px;
+  margin: 30px 20px 30px 20px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.runButton {
+  color: #373737;
+  font-size: 18px;
+  font-weight: 900px;
+  margin: 30px 20px 0px 20px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.bodyText {
+  color: #5e5e5e;
+  font-size: 12px;
+  font-weight: 100px;
+  margin: 5px 20px 20px 20px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+#runAxs {
+  background-color: #000000; /* Green */
   border: none;
-  color: #FFF3EA;
+  color: #fff3ea;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -90,12 +90,35 @@ margin-right: 29px;
   border-radius: 3px;
   float: right;
   margin-top: -5px;
-  }
-  .intro{
+}
 
-  }
+.inARow {
+  display: flex;
+  flex-wrap: wrap; /*wrap, nowrap, wrap-reverse*/
+  flex-direction: row; /*row, row-reverse, column, column-reverse*/
+  width: 230px;
+}
+.inARow:hover {
+  background-color: white;
+}
 
-  /* h2 {
+.inARow2 {
+  margin-top: -10px;
+  display: flex;
+
+  flex-direction: row; /*row, row-reverse, column, column-reverse*/
+  align-content: flex-start; /*flex-start, flex-end, center, stretch, space-between, space-around*/
+  /* align-items: flex-start; */
+}
+#grade {
+  font-size: 40px;
+  /* margin-top: 10px; */
+}
+#space {
+  margin-top: 40px;
+}
+
+/* h2 {
     color: rgb(110, 116, 128);
     font-size: 16px;
     line-height: 20px;
@@ -141,7 +164,7 @@ margin-right: 29px;
     -webkit-user-select: none;
     flex: none;
   } */
-  /* The switch - the box around the slider */
+/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -166,8 +189,8 @@ margin-right: 29px;
   right: 0px;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -177,9 +200,9 @@ margin-right: 29px;
   width: 13px;
   left: 2px;
   bottom: 2px;
-  background-color: #FFFFFF;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {

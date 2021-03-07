@@ -20,13 +20,13 @@ function createPanel() {
           }
           break;
         }
-        case 'HIGHLIGHT_REPORT': {
-          const { warningId } = message.data;
-          if (_window) {
-            _window.highlightReportLine(warningId);
-          }
-          break;
-        }
+        // case 'HIGHLIGHT_REPORT': {
+        //   const { warningId } = message.data;
+        //   if (_window) {
+        //     _window.highlightReportLine(warningId);
+        //   }
+        //   break;
+        // }
         case 'UNHIGHLIGHT_REPORT': {
           const { warningId } = message.data;
           if (_window) {
