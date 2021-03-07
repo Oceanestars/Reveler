@@ -1,17 +1,25 @@
 {
-    "name": "Reveler",
-    "version": "1.0",
-    "manifest_version": 2,
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
-    "browser_action": {
-      "default_title": "Reveler"
-    },
-    "background": {
-      "scripts": ["background.js"]
-    }
-  }
+  "manifest_version": 2,
+  "name": "Reveler",
+  "version": "0.0.1",
+  "minimum_chrome_version": "42",
+  "devtools_page": "main.html",
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [ "main.html", "panel.html", "build/backend.js"],
+
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+
+  "icons": {
+    "48": "Reveler_logo/Reveler_logo2.png",
+    "128": "Reveler_logo/Reveler_logo2.png"
+  },
+
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "activeTab"
+  ]
+}
