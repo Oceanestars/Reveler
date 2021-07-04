@@ -22,6 +22,7 @@ git clone https://github.com/yourusername/Creative-Code-Project.git
 Then you need to head to go [Google chrome extension](chrome://extensions/) and toggle on developer mode.
 You then want to load this entire folder and it'll work!
 If you plan on making any edits make sure to reload it everytime.
+Curious how the project was started? Take a look at the [Figma Prototype](https://www.figma.com/file/ceQWjjjE9oz29EmqohU6dL/HackCU-project?node-id=0%3A1)
 
 
 ## Credit
